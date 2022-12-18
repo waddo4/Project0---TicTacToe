@@ -1,0 +1,45 @@
+.container {
+    font-family: 'Press Start 2P', cursive;
+    color: lime;
+    text-align: center;
+}
+
+body {
+    background-color: rgb(5, 5, 5);
+}
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+main {
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.aside1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.aside2 {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: column;
+}
+
+img {
+    margin-top: 50px;
+    margin-bottom: 40px;
+    width: 256px;
+    height: 233px;
+}
