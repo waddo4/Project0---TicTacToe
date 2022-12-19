@@ -32,14 +32,9 @@ footer {
 }
 .grid {
     display: grid;
-    grid-template-areas: "zero zero zero"
-                         "one two three"
+    grid-template-areas: "one two three"
                          "four five six"
                          "seven eight nine";
-}
-.playerTurn {
-    grid-area: zero;
-    margin-bottom: 40px;
 }
 .tile0 {
     grid-area: one;

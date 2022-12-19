@@ -17,7 +17,8 @@ Planning is underway. Development has begun.
 ## Bugs & Solutions
 
 - ~~Potential bug: How to stop players from choosing the same square?~~  SOLVED
-- D.R.Y bug: Repeating functions for each grid square.
+- ~~D.R.Y bug: Repeating functions for each grid square.~~ SOLVED
+- .removeEventListener not working now functions are not hard coded.
 
 ## Improvement ideas
 

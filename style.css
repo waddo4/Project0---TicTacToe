@@ -25,35 +25,18 @@ footer {
 
 aside {
     display: flex;
-    justify-content: center;
+    justify-content:space-around;
     align-items: center;
     flex-direction: column;
 }
 
-aside > h1,.p1score {
-    justify-content: flex-start;
-    align-items: center;
-    flex-direction: column;
-}
-aside > img {
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-.p1img .p2img {
-    margin-top: 50px;
-    margin-bottom: 40px;
-    width: auto;
-    height: auto;
-}
-
-.invader {
+.Player2 {
     background-image: url(Images/invader1.PNG);
     background-position: center;
     background-repeat: no-repeat;
 }
 
-.spaceship {
+.Player1 {
     background-image: url(Images/spaceship.PNG);
     background-position: center;
     background-repeat: no-repeat;
