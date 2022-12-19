@@ -1,6 +1,6 @@
 # TicTacToe
 
-This is my version of Tic Tac Toe (hyperlinked).
+This is my version of TicTacToe (hyperlinked).
 
 ## Technologies used
  - HTML
@@ -16,7 +16,8 @@ Planning is underway. Development has begun.
 
 ## Bugs & Solutions
 
-Potential bug: How to stop players from choosing the same square?
+- ~~Potential bug: How to stop players from choosing the same square?~~  SOLVED
+- D.R.Y bug: Repeating functions for each grid square.
 
 ## Improvement ideas
 

@@ -1,6 +1,6 @@
     // Elements getting selected
 const grid = document.querySelector('.grid')
-const playerTurn = document.querySelector('playerTurn')
+const turnCounter = document.querySelector('playerTurn')
 const p1score = document.querySelector('p1score')
 const p2score = document.querySelector('p2score')
 const p1img = document.querySelector('p1img')
@@ -24,60 +24,87 @@ let currentPlayer = players[0]
     //loop for the # of squares
 // for (let i=0; i<grid.children.length; i++)
 
-
-    //Function for adding player image on click + changing the currentplayer
-grid0.addEventListener ('click', function (){
+const playersTurn = function (){
     grid0.classList.add(currentPlayer)
     players.reverse()
     currentPlayer = players[0]
-})
-
-grid1.addEventListener ('click', function (){
+    if (grid0.classList.contains(player1) === true || grid0.classList.contains(player2) === true) {
+        grid0.removeEventListener ('click', playersTurn)
+    }
+}
+const playersTurn1 = function (){
     grid1.classList.add(currentPlayer)
     players.reverse()
     currentPlayer = players[0]
-})
-
-grid2.addEventListener ('click', function (){
+    if (grid1.classList.contains(player1) === true || grid1.classList.contains(player2) === true) {
+        grid1.removeEventListener ('click', playersTurn1)
+    }
+}
+const playersTurn2 = function (){
     grid2.classList.add(currentPlayer)
     players.reverse()
     currentPlayer = players[0]
-})
-
-grid3.addEventListener ('click', function (){
+    if (grid2.classList.contains(player1) === true || grid2.classList.contains(player2) === true) {
+        grid2.removeEventListener ('click', playersTurn2)
+    }
+}
+const playersTurn3 = function (){
     grid3.classList.add(currentPlayer)
     players.reverse()
     currentPlayer = players[0]
-})
-
-grid4.addEventListener ('click', function (){
+    if (grid3.classList.contains(player1) === true || grid3.classList.contains(player2) === true) {
+        grid3.removeEventListener ('click', playersTurn3)
+    }
+}
+const playersTurn4 = function (){
     grid4.classList.add(currentPlayer)
     players.reverse()
     currentPlayer = players[0]
-})
-
-grid5.addEventListener ('click', function (){
+    if (grid4.classList.contains(player1) === true || grid4.classList.contains(player2) === true) {
+        grid4.removeEventListener ('click', playersTurn4)
+    }
+}
+const playersTurn5 = function (){
     grid5.classList.add(currentPlayer)
     players.reverse()
     currentPlayer = players[0]
-})
-
-grid6.addEventListener ('click', function (){
+    if (grid5.classList.contains(player1) === true || grid5.classList.contains(player2) === true) {
+        grid5.removeEventListener ('click', playersTurn5)
+    }
+}
+const playersTurn6 = function (){
     grid6.classList.add(currentPlayer)
     players.reverse()
     currentPlayer = players[0]
-})
-
-grid7.addEventListener ('click', function (){
+    if (grid6.classList.contains(player1) === true || grid6.classList.contains(player2) === true) {
+        grid6.removeEventListener ('click', playersTurn6)
+    }
+}
+const playersTurn7 = function (){
     grid7.classList.add(currentPlayer)
     players.reverse()
     currentPlayer = players[0]
-})
-
-grid8.addEventListener ('click', function (){
+    if (grid7.classList.contains(player1) === true || grid7.classList.contains(player2) === true) {
+        grid7.removeEventListener ('click', playersTurn7)
+    }
+}
+const playersTurn8 = function (){
     grid8.classList.add(currentPlayer)
     players.reverse()
     currentPlayer = players[0]
-})
+    if (grid8.classList.contains(player1) === true || grid8.classList.contains(player2) === true) {
+        grid8.removeEventListener ('click', playersTurn8)
+    }
+}
 
+    //Function for adding player image on click + changing the currentplayer
+grid0.addEventListener ('click', playersTurn)
+grid1.addEventListener ('click', playersTurn1)
+grid2.addEventListener ('click', playersTurn2)
+grid3.addEventListener ('click', playersTurn3)
+grid4.addEventListener ('click', playersTurn4)
+grid5.addEventListener ('click', playersTurn5)
+grid6.addEventListener ('click', playersTurn6)
+grid7.addEventListener ('click', playersTurn7)
+grid8.addEventListener ('click', playersTurn8)
 
