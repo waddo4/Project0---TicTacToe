@@ -3,7 +3,11 @@
     color: lime;
     text-align: center;
 }
+.titleImg {
+    width: 340px;
+    height: 150px;
 
+}
 body {
     background-color: rgb(0, 0, 0);
 }
@@ -11,6 +15,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     margin-top: 40px;
 }
 main {
@@ -25,7 +30,8 @@ footer {
 
 aside {
     display: flex;
-    justify-content:space-around;
+    justify-content:flex-start;
+    gap: 70px;
     align-items: center;
     flex-direction: column;
 }
@@ -40,4 +46,8 @@ aside {
     background-image: url(Images/spaceship.PNG);
     background-position: center;
     background-repeat: no-repeat;
+}
+
+aside > h1  {
+    color: white;
 }

@@ -1,5 +1,5 @@
     // Elements getting selected
-const grid = document.querySelector('.grid')
+const tiles = document.querySelectorAll('.tile')
 const playerTurn = document.querySelector('.playerTurn')
 const p1score = document.querySelector('.p1score')
 const p2score = document.querySelector('.p2score')
@@ -12,25 +12,56 @@ const player2 = 'Player2'
 const players = [player1, player2]
 let currentPlayer = players[0]
 
+//might be helpful
+const playerArray = []
+
     //loop for the # of squares
 // for (let i=0; i<grid.children.length; i++)
 
-
     //Function for player turn + changing the currentplayer
-const playersTurn = function (event){
+        //Attribute portion of the function sourced from chatGPT 
+tiles.forEach((tile) => {
+    tile.addEventListener('click', () => {
+     
+        if (tile.getAttribute('selected') === 'true') {
+            return;
+        }
+  
+        tile.setAttribute('selected', 'true');
+        tile.setAttribute('player', currentPlayer);
+            tile.classList.add(currentPlayer)
+            players.reverse()
+            currentPlayer = players[0]
+            playerTurn.textContent = `${currentPlayer}'s turn`
 
-    event.target.classList.add(currentPlayer)
-        console.log(event.target);
-        console.log(event.target.classList.contains(player1));
-    players.reverse()
-    currentPlayer = players[0]
-    playerTurn.textContent = `${currentPlayer}'s turn`
-        //Not working
-    if (event.target.classList.contains(player1) === true || event.target.classList.contains(player2) === true) {
-        event.target.removeEventListener ('click', playersTurn)
-    }
-}
+            //Player 1 win conditions
+        if (tiles[0].getAttribute('player') === 'Player1' && tiles[1].getAttribute('player') === 'Player1' && tiles[2].getAttribute('player') === 'Player1' || 
+        tiles[3].getAttribute('player') === 'Player1' && tiles[4].getAttribute('player') === 'Player1' && tiles[5].getAttribute('player') === 'Player1' || 
+        tiles[6].getAttribute('player') === 'Player1' && tiles[7].getAttribute('player') === 'Player1' && tiles[8].getAttribute('player') === 'Player1' || 
+        tiles[0].getAttribute('player') === 'Player1' && tiles[3].getAttribute('player') === 'Player1' && tiles[6].getAttribute('player') === 'Player1' || 
+        tiles[1].getAttribute('player') === 'Player1' && tiles[4].getAttribute('player') === 'Player1' && tiles[7].getAttribute('player') === 'Player1' || 
+        tiles[2].getAttribute('player') === 'Player1' && tiles[5].getAttribute('player') === 'Player1' && tiles[8].getAttribute('player') === 'Player1' || 
+        tiles[0].getAttribute('player') === 'Player1' && tiles[4].getAttribute('player') === 'Player1' && tiles[8].getAttribute('player') === 'Player1'|| 
+        tiles[2].getAttribute('player') === 'Player1' && tiles[4].getAttribute('player') === 'Player1' && tiles[6].getAttribute('player') === 'Player1') {
+            playerTurn.textContent = `${players[1]} is the winner!`
+            tiles.forEach((tile) => {
+                tile.setAttribute('selected', 'true')
+            })
+        }
 
-grid.addEventListener ('click', playersTurn)
-
-
+            //Player 2 win conditions (will condense)
+        if (tiles[0].getAttribute('player') === 'Player2' && tiles[1].getAttribute('player') === 'Player2' && tiles[2].getAttribute('player') === 'Player2' || 
+        tiles[3].getAttribute('player') === 'Player2' && tiles[4].getAttribute('player') === 'Player2' && tiles[5].getAttribute('player') === 'Player2' || 
+        tiles[6].getAttribute('player') === 'Player2' && tiles[7].getAttribute('player') === 'Player2' && tiles[8].getAttribute('player') === 'Player2' || 
+        tiles[0].getAttribute('player') === 'Player2' && tiles[3].getAttribute('player') === 'Player2' && tiles[6].getAttribute('player') === 'Player2' || 
+        tiles[1].getAttribute('player') === 'Player2' && tiles[4].getAttribute('player') === 'Player2' && tiles[7].getAttribute('player') === 'Player2' || 
+        tiles[2].getAttribute('player') === 'Player2' && tiles[5].getAttribute('player') === 'Player2' && tiles[8].getAttribute('player') === 'Player2' || 
+        tiles[0].getAttribute('player') === 'Player2' && tiles[4].getAttribute('player') === 'Player2' && tiles[8].getAttribute('player') === 'Player2'|| 
+        tiles[2].getAttribute('player') === 'Player2' && tiles[4].getAttribute('player') === 'Player2' && tiles[6].getAttribute('player') === 'Player2') {
+            playerTurn.textContent = `${players[1]} is the winner!`
+            tiles.forEach((tile) => {
+                tile.setAttribute('selected', 'true')
+            })
+        }
+    })
+})
