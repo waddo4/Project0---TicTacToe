@@ -1,16 +1,37 @@
+html {
+    height: 100%;
+}
+body {
+    margin: 0;
+    min-height: 100%;
+}
 .container {
     font-family: 'Press Start 2P', cursive;
     color: lime;
     text-align: center;
+    padding: 0 20px 40px 20px;
 }
 .titleImg {
     width: 340px;
     height: 150px;
 
 }
-body {
-    background-color: rgb(0, 0, 0);
+.side1 {
+    background-image: url(Images/spaceinvaders.gif);
+    background-position:left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: black;
+    opacity: 0.9;
 }
+.side2 {
+    background-image: url(Images/spaceinvaders.gif);
+    background-position:right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: black;
+    opacity: 0.9;
+    }
 header {
     display: flex;
     justify-content: center;
@@ -24,8 +45,9 @@ main {
 }
 footer {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
+    flex-direction: row;
 }
 
 aside {
@@ -50,4 +72,11 @@ aside {
 
 aside > h1  {
     color: white;
+}
+
+.reset {
+ background-image: url(Images/reset.jpg);
+ background-position: center;
+ background-size:cover;
+ padding: 40px;
 }
