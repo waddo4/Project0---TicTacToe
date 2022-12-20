@@ -1,37 +1,45 @@
 html {
     height: 100%;
 }
+
 body {
     margin: 0;
     min-height: 100%;
 }
+
 .container {
     font-family: 'Press Start 2P', cursive;
     color: lime;
     text-align: center;
     padding: 0 20px 40px 20px;
 }
+
 .titleImg {
     width: 340px;
     height: 150px;
 
 }
+
 .side1 {
+    display: flex;
     background-image: url(Images/spaceinvaders.gif);
-    background-position:left;
+    background-position: left;
     background-repeat: no-repeat;
     background-size: cover;
     background-color: black;
     opacity: 0.9;
 }
+
 .side2 {
+    display: flex;
     background-image: url(Images/spaceinvaders.gif);
-    background-position:right;
+    background-position: right;
     background-repeat: no-repeat;
     background-size: cover;
     background-color: black;
     opacity: 0.9;
-    }
+}
+
 header {
     display: flex;
     justify-content: center;
@@ -39,10 +47,12 @@ header {
     flex-direction: column;
     margin-top: 40px;
 }
+
 main {
     margin-top: 20px;
     margin-bottom: 40px;
 }
+
 footer {
     display: flex;
     justify-content: space-around;
@@ -52,7 +62,7 @@ footer {
 
 aside {
     display: flex;
-    justify-content:flex-start;
+    justify-content: flex-start;
     gap: 70px;
     align-items: center;
     flex-direction: column;
@@ -70,13 +80,48 @@ aside {
     background-repeat: no-repeat;
 }
 
-aside > h1  {
+aside>h1 {
     color: white;
 }
 
 .reset {
- background-image: url(Images/reset.jpg);
- background-position: center;
- background-size:cover;
- padding: 40px;
+    background-image: url(Images/reset.PNG);
+    background-position: center;
+    background-size: cover;
+    padding: 35px;
+}
+
+.stop {
+    background-image: url(Images/stop.jpg);
+    background-position: center;
+    background-size: cover;
+    padding: 35px;
+}
+
+.sideTitle1 {
+    display: flex;
+    font-family: 'Press Start 2P', cursive;
+    color: lime;
+    justify-content: center;
+    align-items:center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    font-size: 48px;
+    text-align: center;
+    line-height: 1.5em;
+    opacity: 0;
+}
+
+.sideTitle2 {
+    display: flex;
+    font-family: 'Press Start 2P', cursive;
+    color: lime;
+    justify-content: center;
+    align-items:center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    font-size: 48px;
+    text-align: center;
+    line-height: 1.5em;
+    opacity: 0;
 }
