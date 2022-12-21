@@ -1,0 +1,51 @@
+.containerInv {
+    background-color: white;
+    color: blue;
+}
+
+.Player2Inv {
+    background-image: url(Images/invader2.PNG);
+}
+
+.Player1Inv {
+    background-image: url(Images/spaceship1.PNG);
+}
+
+.playerTitleInv {
+    color: black;
+} 
+
+.resetInv {
+    background-image: url(Images/reset1.PNG);
+    border: 0;
+}
+
+.stopInv {
+    background-image: url(Images/stop1.jpg);
+    border: 0;
+}
+
+.sideTitleInv {
+    color: blue;
+}
+
+.tileInv {
+    border-color: rgb(132, 0, 255);
+}
+
+.sideInv {
+    background-color: white;
+}
+
+.styleInv {
+    background-image: url(Images/darkmode.png);
+    border: 0;
+}
+
+/* .p1imgInv {
+
+}
+
+.p2imgInv {
+    
+} */

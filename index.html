@@ -7,15 +7,17 @@
     <title>Tic Tac Toe</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="style-grid.css">
+    <link rel="stylesheet" href="style-inverted.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
     </style>
 </head>
 <body>
-    <div class="side1"><h1 class="sideTitle1">SPACE INVADERS</h1></div>
-    <div class="side2"><h1 class="sideTitle2">SPACE INVADERS</h1></div>
+    <div class="side1"><h1 class="sideT1 sideTitle">SPACE INVADERS</h1></div>
+    <div class="side2"><h1 class="sideT2 sideTitle">SPACE INVADERS</h1></div>
     <div class="container">
         <header>
+            <button class="style"></button>
             <h1 class="title">SPACE INVADERS</h1>
             <h1 class="title">Tic Tac Toe</h1>
         </header>
@@ -34,15 +36,15 @@
             </main>
         </div>
         <aside class="aside1">
-            <h1>PLAYER1 SCORE</h1>
+            <h1 class="player1Title">PLAYER1 SCORE</h1>
             <h2 class="p1score">0</h2>
-            <img class="p1img" src="Images/spaceship.PNG" alt="Spaceship">
+            <div class="playerImg Player1"></div>
             <p>TEXT</p>
         </aside>
         <aside class="aside2">
-            <h1>PLAYER2 SCORE</h1>
+            <h1 class="player2Title">PLAYER2 SCORE</h1>
             <h2 class="p2score">0</h2>
-            <img class="p2img" src="Images/invader1.PNG" alt="Invader">
+            <div class="playerImg Player2"></div>
             <p>TEXT</p>
         </aside>
         <footer>
