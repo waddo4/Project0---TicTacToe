@@ -1,51 +1,55 @@
-.containerInv {
+.inverted .container {
     background-color: white;
     color: blue;
 }
 
-.Player2Inv {
+.inverted .Player2 {
     background-image: url(Images/invader2.PNG);
 }
 
-.Player1Inv {
+.inverted .Player1 {
     background-image: url(Images/spaceship1.PNG);
 }
 
-.playerTitleInv {
+.inverted .playerTitle {
     color: black;
 } 
 
-.resetInv {
+.inverted .reset {
     background-image: url(Images/reset1.PNG);
     border: 0;
 }
 
-.stopInv {
+.inverted .stop {
     background-image: url(Images/stop1.jpg);
     border: 0;
 }
 
-.sideTitleInv {
+.inverted .sideTitle {
     color: blue;
 }
 
-.tileInv {
+.inverted .tile {
     border-color: rgb(132, 0, 255);
 }
 
-.sideInv {
+.inverted .side1 {
     background-color: white;
 }
 
-.styleInv {
+.inverted .side2 {
+    background-color: white;
+}
+
+.inverted .styleBtn {
     background-image: url(Images/darkmode.png);
     border: 0;
 }
 
-/* .p1imgInv {
-
+.inverted .p1img {
+    background-image: url(Images/spaceship1.png);
 }
 
-.p2imgInv {
-    
-} */
+.inverted .p2img {
+    background-image: url(Images/invader2.png);
+}

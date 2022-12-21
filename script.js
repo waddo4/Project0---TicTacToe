@@ -3,18 +3,18 @@ const tiles = document.querySelectorAll('.tile')
 const playerTurn = document.querySelector('.playerTurn')
 const p1score = document.querySelector('.p1score')
 const p2score = document.querySelector('.p2score')
-const p1img = document.querySelector('.p1img')
-const p2img = document.querySelector('.p2img')
 const resetBtn = document.querySelector('.reset')
 const stopBtn = document.querySelector('.stop')
 const side1 = document.querySelector('.side1')
 const side2 = document.querySelector('.side2')
 const sideTitle1 = document.querySelector('.sideT1')
 const sideTitle2 = document.querySelector('.sideT2')
-const style = document.querySelector('.style')
+const styleBtn = document.querySelector('.styleBtn')
 const container = document.querySelector('.container')
 const player1Title = document.querySelector('.player1Title')
 const player2Title = document.querySelector('.player2Title')
+const player1Img = document.querySelector('.Player1')
+const player2Img = document.querySelector('.Player2')
 
 //Players
 const player1 = 'Player1'
@@ -50,23 +50,9 @@ stopBtn.addEventListener('click', () => {
 })
 
 //Darkmode toggle
-style.addEventListener('click', () => {
+styleBtn.addEventListener('click', () => {
 
-    container.classList.toggle("containerInv")
-    // player1.textContent.toggle("invader2")
-    // player2.textContent.toggle("spaceship1")
-    player1Title.classList.toggle("playerTitleInv")
-    player2Title.classList.toggle("playerTitleInv")
-    stopBtn.classList.toggle("stopInv")
-    resetBtn.classList.toggle("resetInv")
-    sideTitle1.classList.toggle("sideTitleInv")
-    sideTitle2.classList.toggle("sideTitleInv")
-    side1.classList.toggle("sideInv")
-    side2.classList.toggle("sideInv")
-    tiles.forEach((tile) => {
-        tile.classList.toggle("tileInv")
-    });
-    style.classList.toggle("styleInv")
+        document.body.classList.toggle("inverted")
 
 })
 
@@ -78,7 +64,9 @@ tiles.forEach((tile) => {
         if (tile.getAttribute('selected') === 'true') {
             return;
         }
-
+        if (tile.getAttribute('freeze') === 'true') {
+            return;
+        }
         //What happens to the tile after it's clicked.
         tile.setAttribute('selected', 'true');
         tile.setAttribute('player', currentPlayer);
@@ -90,7 +78,18 @@ tiles.forEach((tile) => {
 
         //Draw condition
         if (draw === tiles.length) {
+                
             playerTurn.textContent = `It's a draw!`
+            draw = 0;
+            setTimeout(() => {
+                playerTurn.textContent = `${currentPlayer}'s turn`;
+                tiles.forEach((tile) => {
+                    tile.classList.remove(player1, player2)
+                    tile.removeAttribute('selected')
+                    tile.removeAttribute('player')
+                })
+            }, '2000')
+
         }
 
         //Player 1 win conditions
@@ -106,10 +105,17 @@ tiles.forEach((tile) => {
             counter1 += 1000
             p1score.innerHTML = counter1
             tiles.forEach((tile) => {
-                tile.classList.remove(player1, player2)
-                tile.removeAttribute('selected')
-                tile.removeAttribute('player')
+                tile.setAttribute('freeze', 'true')
             })
+            setTimeout(() => {
+                playerTurn.textContent = `${currentPlayer}'s turn`;
+                tiles.forEach((tile) => {
+                    tile.classList.remove(player1, player2)
+                    tile.removeAttribute('selected')
+                    tile.removeAttribute('player')
+                    tile.removeAttribute('freeze')
+                })
+            }, '2000')
             draw = 0
         }
 
@@ -126,10 +132,17 @@ tiles.forEach((tile) => {
             counter2 += 1000
             p2score.innerHTML = counter2
             tiles.forEach((tile) => {
-                tile.classList.remove(player1, player2)
-                tile.removeAttribute('selected')
-                tile.removeAttribute('player')
+                tile.setAttribute('freeze', 'true')
             })
+            setTimeout(() => {
+                playerTurn.textContent = `${currentPlayer}'s turn`;
+                tiles.forEach((tile) => {
+                    tile.classList.remove(player1, player2)
+                    tile.removeAttribute('selected')
+                    tile.removeAttribute('player')
+                    tile.removeAttribute('freeze')
+                })
+            }, '2000')
             draw = 0
         }
     })

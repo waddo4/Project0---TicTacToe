@@ -16,18 +16,20 @@ body {
 
 }
 
-.titleImg {
-    width: 340px;
-    height: 150px;
-
+.styleBtn {
+    align-self:center;
+    background-image: url(Images/lightmode.png);
+    background-position: center;
+    background-size: cover;
+    padding: 12px;
 }
 
 header {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     flex-direction: column;
-    margin-top: 20px;
+    margin-top: 15px;
 }
 
 main {
@@ -137,11 +139,3 @@ aside>h1 {
     opacity: 1;
 }
 
-.style {
-    display: flex;
-    justify-content: right;
-    background-image: url(Images/lightmode.png);
-    background-position: center;
-    background-size: cover;
-    padding: 12px;
-}
