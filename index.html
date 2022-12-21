@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,46 +13,58 @@
         @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
     </style>
 </head>
+
 <body>
-    <div class="side1"><h1 class="sideT1 sideTitle">SPACE INVADERS</h1></div>
-    <div class="side2"><h1 class="sideT2 sideTitle">SPACE INVADERS</h1></div>
-    <div class="container">
-        <header>
-            <button class="styleBtn"></button>
-            <h1 class="title">SPACE INVADERS</h1>
-            <h1 class="title">Tic Tac Toe</h1>
-        </header>
-        <div class="grid-container">
-            <h2 class="playerTurn">Player1's turn</h2>
-            <main class="grid">
-                <div class="tile tile0"></div>
-                <div class="tile tile1"></div>
-                <div class="tile tile2"></div>
-                <div class="tile tile3"></div>
-                <div class="tile tile4"></div>
-                <div class="tile tile5"></div>
-                <div class="tile tile6"></div>
-                <div class="tile tile7"></div>
-                <div class="tile tile8"></div>
-            </main>
+    <div class="startScreen">
+        <img class='titleImage' src="Images/title.png" alt="SPACE INVADERS">
+        <h1 class="mainTitle">TIC TAC TOE</h1>
+        <p class="start anim-typewriter">Click here to start..</p>
+    </div>
+    <div class="mainScreen">
+        <div class="side1">
+            <h1 class="sideT1 sideTitle">SPACE INVADERS</h1>
         </div>
-        <aside class="aside1">
-            <h1 class="playerTitle">PLAYER1 SCORE</h1>
-            <h2 class="p1score">0</h2>
-            <div class="playerImg Player1"></div>
-            <p>HUMANS</p>
-        </aside>
-        <aside class="aside2">
-            <h1 class="playerTitle">PLAYER2 SCORE</h1>
-            <h2 class="p2score">0</h2>
-            <div class="playerImg Player2"></div>
-            <p>INVADERS</p>
-        </aside>
-        <footer>
-            <button class="reset"></button>
-            <button class="stop"></button>
-        </footer>
-        <script src="script.js"></script>
+        <div class="side2">
+            <h1 class="sideT2 sideTitle">SPACE INVADERS</h1>
+        </div>
+        <div class="container">
+            <header>
+                <button class="styleBtn"></button>
+                <h1 class="title">SPACE INVADERS</h1>
+                <h1 class="title">Tic Tac Toe</h1>
+            </header>
+            <div class="grid-container">
+                <h2 class="playerTurn">Player1's turn</h2>
+                <main class="grid">
+                    <div class="tile tile0"></div>
+                    <div class="tile tile1"></div>
+                    <div class="tile tile2"></div>
+                    <div class="tile tile3"></div>
+                    <div class="tile tile4"></div>
+                    <div class="tile tile5"></div>
+                    <div class="tile tile6"></div>
+                    <div class="tile tile7"></div>
+                    <div class="tile tile8"></div>
+                </main>
+            </div>
+            <aside class="aside1">
+                <h1 class="playerTitle">PLAYER1 SCORE</h1>
+                <h2 class="p1score">0</h2>
+                <div class="playerImg Player1"></div>
+                <p>HUMANS</p>
+            </aside>
+            <aside class="aside2">
+                <h1 class="playerTitle">PLAYER2 SCORE</h1>
+                <h2 class="p2score">0</h2>
+                <div class="playerImg Player2"></div>
+                <p>INVADERS</p>
+            </aside>
+            <footer>
+                <button class="reset"></button>
+                <button class="stop"></button>
+            </footer>
+            <script src="script.js"></script>
+        </div>
     </div>
 </body>
 
