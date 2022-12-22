@@ -4,11 +4,11 @@
 }
 
 .inverted .Player2 {
-    background-image: url(Images/invader2.PNG);
+    background-image: url("Images/invader2.PNG");
 }
 
 .inverted .Player1 {
-    background-image: url(Images/spaceship1.PNG);
+    background-image: url("Images/spaceship1.PNG");
 }
 
 .inverted .playerTitle {
@@ -16,17 +16,17 @@
 } 
 
 .inverted .reset {
-    background-image: url(Images/reset1.PNG);
+    background-image: url("Images/reset1.PNG");
     border: 0;
 }
 
 .inverted .stop {
-    background-image: url(Images/stop1.jpg);
+    background-image: url("Images/stop1.jpg");
     border: 0;
 }
 
 .inverted .mute {
-    background-image: url(Images/mute1.png);
+    background-image: url("Images/mute1.png");
     border: 0;
 }
 .inverted .sideTitle {
@@ -46,22 +46,22 @@
 }
 
 .inverted .styleBtn {
-    background-image: url(Images/darkmode.png);
+    background-image: url("Images/darkmode.png");
     border: 0;
 }
 
 .inverted .p1img {
-    background-image: url(Images/spaceship1.png);
+    background-image: url("Images/spaceship1.png");
 }
 
 .inverted .p2img {
-    background-image: url(Images/invader2.png);
+    background-image: url("Images/invader2.png");
 }
 
 .inverted .monster1 {
-    background-image: url(Images/monster2.png);
+    background-image: url("Images/monster2.png");
 }
 
 .inverted .monsterB1 {
-    background-image: url(Images/monsterB2.png);
+    background-image: url("Images/monsterB2.png");
 }

@@ -15,7 +15,7 @@ html, body, .mainScreen {
 
 .styleBtn {
     align-self:center;
-    background-image: url(Images/lightmode.png);
+    background-image: url("Images/lightmode.png");
     background-position: center;
     background-size: cover;
     padding: 12px;
@@ -50,13 +50,13 @@ aside {
 }
 
 .Player2 {
-    background-image: url(Images/invader1.PNG);
+    background-image: url("Images/invader1.PNG");
     background-position: center;
     background-repeat: no-repeat;
 }
 
 .Player1 {
-    background-image: url(Images/spaceship.PNG);
+    background-image: url("Images/spaceship.PNG");
     background-position: center;
     background-repeat: no-repeat;
 }
@@ -78,14 +78,14 @@ aside > div > h1 {
 }
 
 .reset {
-    background-image: url(Images/reset.PNG);
+    background-image: url("Images/reset.PNG");
     background-position: center;
     background-size: cover;
     padding: 35px;
 }
 
 .stop {
-    background-image: url(Images/stop.jpg);
+    background-image: url("Images/stop.jpg");
     background-position: center;
     background-size: cover;
     padding: 35px;
@@ -93,7 +93,7 @@ aside > div > h1 {
 
 .mute {
 
-    background-image: url(Images/mute.png);
+    background-image: url("Images/mute.png");
     background-position: center;
     background-size: cover;
     padding: 35px;
@@ -115,7 +115,7 @@ aside > div > h1 {
 
 .side1 {
     display: flex;
-    background-image: url(Images/spaceinvaders.gif);
+    background-image: url("Images/spaceinvaders.gif");
     background-position: left;
     background-repeat: no-repeat;
     background-size: cover;
@@ -125,7 +125,7 @@ aside > div > h1 {
 
 .side2 {
     display: flex;
-    background-image: url(Images/spaceinvaders.gif);
+    background-image: url("Images/spaceinvaders.gif");
     background-position: right;
     background-repeat: no-repeat;
     background-size: cover;
@@ -186,7 +186,7 @@ aside > div > h1 {
   }
 
 .monsterB1 {
-    background-image: url(Images/monsterB1.png);
+    background-image: url("Images/monsterB1.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -196,7 +196,7 @@ aside > div > h1 {
   }
 
 .monster1 {
-    background-image: url(Images/monster1.png);
+    background-image: url("Images/monster1.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

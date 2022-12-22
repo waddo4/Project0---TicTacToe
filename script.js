@@ -144,13 +144,6 @@ resetBtn.addEventListener('click', () => {
     draw = 0
 })
 
-//Stops sidebar animations
-stopBtn.addEventListener('click', () => {
-
-    document.body.classList.toggle("sidebar")
-
-})
-
 //Inverted style toggle
 styleBtn.addEventListener('click', () => {
 
@@ -158,8 +151,16 @@ styleBtn.addEventListener('click', () => {
 
 })
 
+//Stops sidebar animations
+stopBtn.addEventListener('click', () => {
+
+    document.body.classList.toggle("sidebar")
+
+})
+
 //Hides main screen when the page loads
 window.onload = function () {
+    
     mainScreen.style.display = 'none';
 }
 
