@@ -50,13 +50,13 @@ aside {
 }
 
 .Player2 {
-    background-image: url("Images/invader1.PNG");
+    background-image: url("Images/Invader1.PNG");
     background-position: center;
     background-repeat: no-repeat;
 }
 
 .Player1 {
-    background-image: url("Images/spaceship.PNG");
+    background-image: url("Images/spaceship.png");
     background-position: center;
     background-repeat: no-repeat;
 }
@@ -78,7 +78,7 @@ aside > div > h1 {
 }
 
 .reset {
-    background-image: url("Images/reset.PNG");
+    background-image: url("Images/reset.png");
     background-position: center;
     background-size: cover;
     padding: 35px;
