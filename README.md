@@ -24,7 +24,7 @@ This project includes:
 **Layout Planning & Development** <br />
 ![Layout development](Images/layoutDevelopment.gif) <br />
 
-Once the layout was completed, I worked on developing the Javascript to get the game working. First, I worked on toggling the players turns, then getting a function that placed the players image on the grid tile they selected. After revising my click function and changing it to add attirbutes, I started working on implementing the win conditions and draw. Once that was working, I added a board reset, changed the design to have the main content in the middle and two side areas that were purely for aesthetics. Finally I added a button to toggle the side animations, a button invert the colours on the page, added sound effects and a mute button.
+Once the layout was completed, I worked on developing the Javascript to get the game working. First, I worked on toggling the players turns, then getting a function that placed the players image on the grid tile they selected. After revising my click function and changing it to add attirbutes, I started working on implementing the win conditions and draw. Once that was working, I added a board reset, changed the design to have the main content in the middle and two side areas that were purely for aesthetics. Finally, I added a button to toggle the side animations, a button invert the colours on the page, added sound effects and a mute button.
 
 
 ## Bugs & Solutions
