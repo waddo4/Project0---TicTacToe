@@ -17,6 +17,7 @@ const player1Img = document.querySelector('.Player1')
 const player2Img = document.querySelector('.Player2')
 const startScreen = document.querySelector('.startScreen')
 const mainScreen = document.querySelector('.mainScreen')
+const muteBtn = document.querySelector('.mute')
 
 //Players + current player
 const player1 = 'Player1'
@@ -46,7 +47,7 @@ tiles.forEach((tile) => {
         }
 
         //What happens to the tile after it's clicked
-
+        shootingSound.play()
         tile.setAttribute('selected', 'true');
         tile.setAttribute('player', currentPlayer);
         tile.classList.add(currentPlayer)
@@ -58,6 +59,7 @@ tiles.forEach((tile) => {
         //Draw condition
         if (draw === tiles.length) {
 
+            ufo.play()
             playerTurn.textContent = `It's a draw!`
             draw = 0;
             setTimeout(() => {
@@ -80,9 +82,11 @@ tiles.forEach((tile) => {
             tiles[0].getAttribute('player') === 'Player1' && tiles[4].getAttribute('player') === 'Player1' && tiles[8].getAttribute('player') === 'Player1' ||
             tiles[2].getAttribute('player') === 'Player1' && tiles[4].getAttribute('player') === 'Player1' && tiles[6].getAttribute('player') === 'Player1') {
 
+            humansWin.play()    
             playerTurn.textContent = `${players[1]} is the winner!`
             counter1 += 1000
             p1score.innerHTML = counter1
+            winningBonus()
             tiles.forEach((tile) => {
                 tile.setAttribute('freeze', 'true')
             })
@@ -108,9 +112,11 @@ tiles.forEach((tile) => {
             tiles[0].getAttribute('player') === 'Player2' && tiles[4].getAttribute('player') === 'Player2' && tiles[8].getAttribute('player') === 'Player2' ||
             tiles[2].getAttribute('player') === 'Player2' && tiles[4].getAttribute('player') === 'Player2' && tiles[6].getAttribute('player') === 'Player2') {
 
+            invadersWin.play()
             playerTurn.textContent = `${players[1]} is the winner!`
             counter2 += 1000
             p2score.innerHTML = counter2
+            winningBonus()
             tiles.forEach((tile) => {
                 tile.setAttribute('freeze', 'true')
             })
@@ -141,10 +147,7 @@ resetBtn.addEventListener('click', () => {
 //Stops sidebar animations
 stopBtn.addEventListener('click', () => {
 
-    side1.classList.toggle("side1Off")
-    side2.classList.toggle("side2Off")
-    sideTitle1.classList.toggle("sideT1On")
-    sideTitle2.classList.toggle("sideT2On")
+    document.body.classList.toggle("sidebar")
 
 })
 
@@ -162,7 +165,73 @@ window.onload = function () {
 
 //Swaps from starting screen to main screen when the start text is clicked
 document.querySelector('.start').addEventListener('click', function () {
-    startScreen.style.display = 'none';
-    mainScreen.style.display = 'grid';
-
+    
+    credit.play()
+    setTimeout(() => {
+        startSound.play()
+        startScreen.style.display = 'none';
+        mainScreen.style.display = 'grid';
+    }, '1500')
 })
+
+//Sound effects
+let shootingSound = new Audio('Images/Sounds/shoot.wav')
+let invadersWin = new Audio('Images/Sounds/explosion.wav')
+let humansWin = new Audio('Images/Sounds/invaderkilled.wav')
+let gameMusic = new Audio('Images/Sounds/05-Attack of the Invaders.mp3')
+let kawaiiMusic = new Audio('Images/Sounds/08-Kawaii Battle Option.mp3')
+let startSound = new Audio('Images/Sounds/03-Start.mp3')
+let credit = new Audio('Images/Sounds/04-Credit.mp3')
+let ufo = new Audio('Images/Sounds/ufo_lowpitch.wav')
+let win = new Audio('Images/Sounds/07-You Win.mp3')
+
+//Sound volume
+shootingSound.volume = 0.05;
+invadersWin.volume = 0.05;
+gameMusic.volume = 0.3;
+gameMusic.loop = true;
+kawaiiMusic.volume = 0.3;
+startSound.volume = 0.5;
+credit.volume = 0.5;
+ufo.volume = 0.05;
+win.volume = 0.5;
+humansWin.volume = 0.05;
+humansWin.playbackRate = 0.5;
+
+
+//Array of all audio elements
+let audioElements = [
+    shootingSound,
+    invadersWin,
+    humansWin,
+    gameMusic,
+    kawaiiMusic,
+    startSound,
+    credit,
+    ufo,
+    win
+]
+
+//Toggles mute for all audio elements
+let isMuted = false;
+muteBtn.addEventListener ('click', function(){
+
+    isMuted = !isMuted;
+
+    for (let i=0; i<audioElements.length; i++) {
+        audioElements[i].muted = isMuted
+    }
+})
+
+//Function for winning bonuses
+const winningBonus = function() {
+if (p1score.innerHTML === "3000" || p2score.innerHTML === "3000") {
+    gameMusic.play()
+}
+if (p1score.innerHTML === "6000" || p2score.innerHTML === "6000") {
+    gameMusic.pause()
+    win.play()
+    setTimeout(() => {
+        kawaiiMusic.play()
+    }, '1000')
+}}

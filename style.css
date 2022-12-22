@@ -66,8 +66,15 @@ aside {
     height: 150px;
 }
 
-aside>h1 {
+aside > div > h1 {
     color: white;
+}
+
+.info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .reset {
@@ -79,6 +86,14 @@ aside>h1 {
 
 .stop {
     background-image: url(Images/stop.jpg);
+    background-position: center;
+    background-size: cover;
+    padding: 35px;
+}
+
+.mute {
+
+    background-image: url(Images/mute.png);
     background-position: center;
     background-size: cover;
     padding: 35px;
@@ -118,21 +133,17 @@ aside>h1 {
     opacity: 0.9;
 }
 
-.side1Off {
+.sidebar .side1, .sidebar .side2 {
     background-image: none;
+    justify-content: center;
+    align-items: center;
     opacity:1;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
-.side2Off{
-    background-image: none;
-    opacity: 1;
-}
 
-.sideT1On {
-    opacity: 1;
-}
-
-.sideT2On {
+.sidebar .sideTitle, .sidebar .monster1, .sidebar .monsterB1{
     opacity: 1;
 }
 
@@ -172,4 +183,28 @@ aside>h1 {
   @keyframes blinkTextCursor{
     from{border-right-color: rgba(255,255,255,.75);}
     to{border-right-color: transparent;}
+  }
+
+.monsterB1 {
+    background-image: url(Images/monsterB1.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 400px;
+    height: 450px;
+    opacity: 0;
+  }
+
+.monster1 {
+    background-image: url(Images/monster1.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 400px;
+    height: 450px;
+    opacity: 0;
+  }
+
+  button {
+    cursor: pointer;
   }
