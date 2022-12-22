@@ -1,6 +1,6 @@
 # Space Invaders TicTacToe
 
-This is my version of [TicTacToe](https://waddo4.github.io/Project0---TicTacToe/). I hope you enjoy.
+This is my version of [TicTacToe](https://waddo4.github.io/Project0-TicTacToe/). I hope you enjoy.
 
 ## Technologies used
  - HTML
