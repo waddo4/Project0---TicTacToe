@@ -56,7 +56,7 @@ aside {
 }
 
 .Player1 {
-    background-image: url("../Images/spaceship.png");
+    background-image: url("../Images/spaceship.PNG");
     background-position: center;
     background-repeat: no-repeat;
 }
@@ -78,7 +78,7 @@ aside > div > h1 {
 }
 
 .reset {
-    background-image: url("../Images/reset.png");
+    background-image: url("../Images/reset.PNG");
     background-position: center;
     background-size: cover;
     padding: 35px;
